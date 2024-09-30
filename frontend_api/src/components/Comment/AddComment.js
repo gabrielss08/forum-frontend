@@ -18,7 +18,7 @@ const AddComment = () => {
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`https://forum-igris.onrender.com/comment/${postId}/comments`, {
+            await axios.post(`https://backend-elite-bwe7czaja7aadrfr.eastus-01.azurewebsites.net/comment/${postId}/comments`, {
                 postId: postId, // Passando o postId junto com o novo comentário
                 content: comment.content,
                 author: comment.author

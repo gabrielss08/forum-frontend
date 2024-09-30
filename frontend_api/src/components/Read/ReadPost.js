@@ -11,7 +11,7 @@ const ReadPost = () => {
     const navigate = useNavigate();
 
     const fetchComments = () => {
-        axios.get(`https://forum-igris.onrender.com/comment/${id}/comments`) 
+        axios.get(`https://backend-elite-bwe7czaja7aadrfr.eastus-01.azurewebsites.net/comment/${id}/comments`) 
             .then(res => {
                 setComments(res.data);
             })
@@ -19,7 +19,7 @@ const ReadPost = () => {
     };
     
     useEffect(() => {
-        axios.get(`https://forum-igris.onrender.com/post/${id}`)
+        axios.get(`https://backend-elite-bwe7czaja7aadrfr.eastus-01.azurewebsites.net/post/${id}`)
             .then(res => {
                 setPost(res.data);
                 fetchComments();
@@ -32,7 +32,7 @@ const ReadPost = () => {
     };
 
     const handleDeletePost = () => {
-        axios.delete(`https://forum-igris.onrender.com/post/${id}`)
+        axios.delete(`https://backend-elite-bwe7czaja7aadrfr.eastus-01.azurewebsites.net/post/${id}`)
             .then(() => {
                 navigate(`/post/`);
             })
@@ -40,7 +40,7 @@ const ReadPost = () => {
     };
 
     const handleDeleteComment = (commentId) => {
-        axios.delete(`https://forum-igris.onrender.com/comment/${commentId}`)
+        axios.delete(`https://backend-elite-bwe7czaja7aadrfr.eastus-01.azurewebsites.net/comment/${commentId}`)
             .then(() => {
                 fetchComments(); // Atualiza os comentários após a exclusão
             })

@@ -19,7 +19,7 @@ const CriarPost = () => {
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://forum-igris.onrender.com/post', post);
+            await axios.post('https://backend-elite-bwe7czaja7aadrfr.eastus-01.azurewebsites.net/post', post);
             navigate('/post');
         } catch (err) {
             console.log(err);
